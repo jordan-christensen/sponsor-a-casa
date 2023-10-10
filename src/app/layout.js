@@ -1,5 +1,5 @@
 import './globals.css';
-import { bebas_neue, libre_baskerville, chlakh_demo } from './fonts';
+import { bebas_neue, inter, chlakh_demo } from './fonts';
 // Components
 import { Header } from '@/components';
 import styles from './layout.module.css';
@@ -10,15 +10,23 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const year = new Date().getFullYear();
+  console.log(year)
+
   return (
     <html
       lang="en"
-      className={`${bebas_neue.variable} ${libre_baskerville.variable} ${chlakh_demo.variable}`}
+      className={`${bebas_neue.variable} ${inter.variable} ${chlakh_demo.variable}`}
     >
       <body>
-        <div>
-          <Header />
-          <main className={styles.main}>{children}</main>
+        <div className={styles.body}>
+          <div>
+            <Header />
+            <main className={styles.main}>{children}</main>
+          </div>
+          <footer className={styles.footer}>
+          {`© ${year} Spark of Hope Foundation`}
+          </footer>
         </div>
       </body>
     </html>

@@ -1,9 +1,57 @@
 .section {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  max-width: 940px;
+  gap: 32px;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 840px;
+}
+
+.heading {
+  padding: 64px 0 42px 0;
+}
+
+.heading > p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 28px;
+
+  color: var(--spark-text);
+}
+
+.subheading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.subheading > .sub {
+  font-size: 24px;
+}
+
+.button {
+  --height: 64px;
+  font-family: var(--font-bebas);
+  background-color: var(--primary-400);
+  color: var(--white);
+  font-size: 32px;
+  letter-spacing: .93px;
+  margin: 24px 0;
+  cursor: pointer;
+  height: var(--height);
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 16px 20px #ddd;
+  transition: all 75ms ease-in;
+}
+
+.button:hover {
+  background-color: var(--primary-500);
+}
+
+.button:active {
+  background-color: var(--primary-600);
 }
 
 .devTools {
@@ -16,6 +64,6 @@
   padding: 16px;
 }
 
-.devTools > ol{
+.devTools > ol {
   list-style-position: inside;
 }

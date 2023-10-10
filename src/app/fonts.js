@@ -1,4 +1,4 @@
-import { Bebas_Neue, Libre_Baskerville } from 'next/font/google'
+import { Bebas_Neue, Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 
 export const bebas_neue = Bebas_Neue({
@@ -9,9 +9,9 @@ export const bebas_neue = Bebas_Neue({
   weight: ['400']
 })
 
-export const libre_baskerville = Libre_Baskerville({
+export const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-baskerville',
+  variable: '--font-inter',
   display: 'swap',
   style: 'normal',
   weight: ['400', '700']

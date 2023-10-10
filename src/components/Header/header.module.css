@@ -3,8 +3,8 @@
   background-color: greenyellow;
   background: linear-gradient(
       0deg,
-      rgba(6, 114, 139, 0.526),
-      rgba(33, 193, 218, 0.359)
+      rgba(17, 106, 116, 0.565),
+      rgba(78, 200, 219, 0.57)
     ),
     var(--background-url);
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 24px;
-  color: var(--spark-white);
+  color: var(--white);
 }
 
 .heroText {
