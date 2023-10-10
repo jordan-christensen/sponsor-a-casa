@@ -6,8 +6,8 @@ import {
   ReactCompareSliderImage,
 } from 'react-compare-slider';
 // Styles & Assets
-import imageA from '../../public/images/compare-image-1.jpg';
-import imageB from '../../public/images/compare-image-2.jpg';
+import imageA from '../../public/images/compare-1.jpg';
+import imageB from '../../public/images/compare-2.jpg';
 import styles from './page.module.css';
 
 export default function Home() {
