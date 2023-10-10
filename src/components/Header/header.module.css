@@ -1,0 +1,40 @@
+.header {
+  height: 300px;
+  background-color: greenyellow;
+  background: linear-gradient(
+      0deg,
+      rgba(6, 114, 139, 0.526),
+      rgba(33, 193, 218, 0.359)
+    ),
+    var(--background-url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--spark-white);
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-chlakh);
+  line-height: 0.65;
+}
+
+.heroTextTop {
+  font-size: 96px;
+}
+
+.heroTextBottom {
+  font-size: 114px;
+}
+
+.subHeading {
+  letter-spacing: .93px;
+  line-height: 1.1;
+}

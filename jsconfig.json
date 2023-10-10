@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/images": ["./public/images"],
+      "@/fonts": ["./public/fonts"],
+      "@/components": ["./src/components"]
+    }
+  }
+}

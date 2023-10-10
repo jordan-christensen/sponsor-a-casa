@@ -1,0 +1,21 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 940px;
+  font-size: 28px;
+}
+
+.devTools {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(44, 91, 128, 0.697);
+  min-width: 175px;
+  min-height: 175px;
+  padding: 16px;
+}
+
+.devTools > ol{
+  list-style-position: inside;
+}
