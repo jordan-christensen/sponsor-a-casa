@@ -1,5 +1,4 @@
 .header {
-  height: 300px;
   background-color: greenyellow;
   background: linear-gradient(
       0deg,
@@ -15,6 +14,12 @@
   flex-direction: column;
   gap: 24px;
   color: var(--white);
+  padding: 32px;
+}
+
+.bar {
+  background-color: var(--secondary-400);
+  height: 10px;
 }
 
 .heroText {

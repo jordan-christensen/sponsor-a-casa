@@ -1,0 +1,51 @@
+.card {
+  border-radius: 8px;
+  background-color: var(--neutral-200);
+}
+
+.statusBar {
+  font-family: var(--font-bebas);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--status-color);
+}
+
+.green {
+  background-color: var(--green-400);
+}
+
+.orange {
+  background-color: var(--orange-400);
+}
+
+.yellow {
+  background-color: var(--secondary-300);
+}
+
+.blue {
+  background-color: var(--blue-300);
+}
+
+.heading {
+  padding: 8px 16px;
+}
+
+.frame {
+  width: 100%;
+  background-color: pink;
+}
+
+.photo {
+min-height: 100%;
+}
+
+.familyName {
+  font-family: var(--font-inter);
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+}

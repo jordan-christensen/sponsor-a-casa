@@ -14,7 +14,7 @@ export const inter = Inter({
   variable: '--font-inter',
   display: 'swap',
   style: 'normal',
-  weight: ['400', '700']
+  weight: ['400', '700', '900']
 })
 
 export const chlakh_demo = localFont({
