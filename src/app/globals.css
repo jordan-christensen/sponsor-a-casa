@@ -94,6 +94,27 @@
   --neutral-800: #262626;
   --neutral-900: #171717;
   --neutral-950: #0a0a0a;
+
+  /* Dimensions */
+  --max-width-main: 1240px;
+  --max-width-alt: 800px;
+  --max-width-full: 100%;
+  --margin-x-main: 32px;
+  --margin-y-main: 48px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --margin-x-main: 24px;
+    --margin-y-main: 40px;
+  }
+}
+
+@media (max-width: 540px) {
+  :root {
+    --margin-x-main: 16px;
+    --margin-y-main: 32px;
+  }
 }
 
 html {

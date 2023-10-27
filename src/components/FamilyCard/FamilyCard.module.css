@@ -1,6 +1,24 @@
+.link {
+  text-decoration: none;
+  color: black;
+}
+
 .card {
+  position: relative;
+  --border-width: 1px;
   border-radius: 8px;
-  background-color: var(--neutral-200);
+  background-color: var(--white);
+  border: var(--border-width) solid var(--neutral-300);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.card:hover {
+  transform: scale(1.015);
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.04),
+    -10px 0 20px 0 rgba(0, 0, 0, 0.04);
+  transition: all 200ms ease;
 }
 
 .statusBar {
@@ -9,29 +27,42 @@
   align-items: center;
   justify-content: center;
   height: 40px;
+  color: var(--white);
+  padding-top: 3px;
+  font-size: 24px;
   overflow: hidden;
-  border-radius: 8px 8px 0 0;
+  border-radius: calc(8px - var(--border-width)) calc(8px - var(--border-width))
+    0 0;
   background-color: var(--status-color);
 }
 
 .green {
-  background-color: var(--green-400);
+  background-color: var(--green-600);
 }
 
 .orange {
-  background-color: var(--orange-400);
+  background-color: var(--orange-600);
 }
 
 .yellow {
-  background-color: var(--secondary-300);
+  background-color: var(--secondary-500);
 }
 
 .blue {
-  background-color: var(--blue-300);
+  background-color: var(--blue-500);
 }
 
 .heading {
   padding: 8px 16px;
+  text-align: center;
+}
+
+.familyName {
+  font-family: var(--font-inter);
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+  font-size: 28px;
 }
 
 .frame {
@@ -40,12 +71,22 @@
 }
 
 .photo {
-min-height: 100%;
+  min-height: 100%;
 }
 
-.familyName {
-  font-family: var(--font-inter);
-  font-weight: 700;
-  line-height: 1.25;
-  text-transform: uppercase;
+.body {
+  padding: 24px 0px;
+}
+
+.body > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 18px;
+  gap: 8px;
+  padding-right: 40px;
+}
+
+.label {
+  font-weight: 600;
 }
