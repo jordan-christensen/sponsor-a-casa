@@ -74,3 +74,19 @@
   letter-spacing: 0.93px;
   line-height: 1.1;
 }
+
+@media (max-width: 767px) {
+  .headerFull {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 540px) {
+  .heroTextTop {
+    font-size: 21vw;
+  }
+  
+  .heroTextBottom {
+    font-size: 25vw;
+  }
+}

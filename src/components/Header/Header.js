@@ -12,8 +12,8 @@ export default function Header({ fullHeader = false }) {
           style={{ "--background-url": `url(${bgImage.src})` }}
         >
           <a
-            className={styles.logoAnchor}
             href="https://www.sparkofhopefoundation.org"
+            className={styles.logoAnchor}
           >
             <img className={styles.logo} src={logo.src} />
           </a>
