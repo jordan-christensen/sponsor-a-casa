@@ -9,13 +9,14 @@
 
 .heading {
   padding: 64px 0 42px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .heading > p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 28px;
-
-  color: var(--spark-text);
+  font-size: 21px;
+  line-height: 1.65;
 }
 
 .subheading {

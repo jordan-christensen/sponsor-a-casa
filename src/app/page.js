@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
+import Link from "next/link";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 import {
   ReactCompareSlider,
   ReactCompareSliderImage,
-} from 'react-compare-slider';
+} from "react-compare-slider";
 // Styles & Assets
-import imageA from '../../public/images/compare-1.jpg';
-import imageB from '../../public/images/compare-2.jpg';
-import styles from './page.module.css';
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
@@ -16,22 +16,55 @@ export default function Home() {
       <div className={styles.heading}>
         <p>
           In Tijuana, Mexico, thousands of families live in extreme poverty.
-          Lorem ipsum<strong> dolor sit amet consectetur</strong> adipisicing
-          elit. Deserunt accusantium officiis.
+          These families have dirt floors, walls made from scrap lumber, leaky
+          roofs and a five gallon bucket for a bathroom.
+        </p>
+        <p>
+          You could build a new home for a family in need. You could change the
+          trajectory of a family forever. Take a look at some families and see
+          what you think.
         </p>
       </div>
-      <div className={styles.subheading}>
-        <p className={styles.sub}>
-          You can make a difference by building a home for a family in need.
-        </p>
-        <p className={styles.sub}>
-          Take a look at some families and see what you think.
-        </p>
-      </div>
+
       <ReactCompareSlider
-        itemOne={<ReactCompareSliderImage src={imageA.src} />}
-        itemTwo={<ReactCompareSliderImage src={imageB.src} />}
+        itemOne={
+          <ReactCompareSliderImage
+            src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698957110/spark-of-hope/home/home_image3_a_fdrqmv.jpg`}
+          />
+        }
+        itemTwo={
+          <ReactCompareSliderImage
+            src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698957110/spark-of-hope/home/home_image3_b_pdiajv.jpg`}
+          />
+        }
       />
+
+      <ReactCompareSlider
+        itemOne={
+          <ReactCompareSliderImage
+            src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698957052/spark-of-hope/home/home_image2_a_tzpzdt.jpg`}
+          />
+        }
+        itemTwo={
+          <ReactCompareSliderImage
+            src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698957051/spark-of-hope/home/home_image2_b_vgqple.jpg`}
+          />
+        }
+      />
+
+      <ReactCompareSlider
+        itemOne={
+          <ReactCompareSliderImage
+            src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698944001/spark-of-hope/home/home_image1_a_sissqz.jpg`}
+          />
+        }
+        itemTwo={
+          <ReactCompareSliderImage
+            src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698944001/spark-of-hope/home/home_image1_b_cyqfr8.jpg`}
+          />
+        }
+      />
+
       <Link href="/families">
         <button className={styles.button}>Explore the possibilities</button>
       </Link>

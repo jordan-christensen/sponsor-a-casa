@@ -6,7 +6,6 @@ import styles from './page.module.css';
 
 export default function Page({ params }) {
   const family = getFamilyById(params.id);
-  console.log(family);
   return (
     <article className={styles.page}>
       <section className={styles.intro}>Family {family?.last_name}</section>

@@ -1,4 +1,5 @@
-.header {
+.headerFull {
+  position: relative;
   background-color: greenyellow;
   background: linear-gradient(
       0deg,
@@ -15,6 +16,36 @@
   gap: 24px;
   color: var(--white);
   padding: 32px;
+}
+
+.header {
+  composes: headerFull;
+}
+
+.logoAnchor {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.logo {
+  width: 120px;
+  /* will-change: filter; */
+  filter: brightness(200%) grayscale(100%);
+  transition: all 200ms ease-in-out;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.logoAnchor:hover .logo {
+  opacity: 0.8;
+  transition: all 200ms ease-in-out;
 }
 
 .bar {
@@ -40,6 +71,6 @@
 }
 
 .subHeading {
-  letter-spacing: .93px;
+  letter-spacing: 0.93px;
   line-height: 1.1;
 }
