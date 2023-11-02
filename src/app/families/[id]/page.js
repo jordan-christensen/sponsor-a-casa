@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 // Hooks & Utils
 import { getFamilyById } from '@/lib/families';
 // Styles & Assets
@@ -8,7 +9,7 @@ export default function Page({ params }) {
   const family = getFamilyById(params.id);
   return (
     <article className={styles.page}>
-      <section className={styles.intro}>Family {family?.last_name}</section>
+      <h1 className={styles.intro}>The {family?.last_name} Family</h1>
       <section className={styles.details}>
         <div className={styles.familyPhotoFrame}>
           <img src={family?.family_photo} alt="Family photo" />
@@ -21,6 +22,13 @@ export default function Page({ params }) {
             <img className={styles.galleryImage} src={image} alt="Current living conditions" />
           </div>
         ))}
+      </section>
+      <section>
+        <Link href="/">
+          <button className="button-main">
+            Sponsor Family
+          </button>
+        </Link>
       </section>
     </article>
   );

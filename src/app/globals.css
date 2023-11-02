@@ -178,3 +178,29 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+.button-main {
+  --height: 64px;
+  font-family: var(--font-bebas);
+  background-color: var(--primary-400);
+  color: var(--white);
+  font-size: 32px;
+  letter-spacing: 0.93px;
+  width: 100%;
+  margin: 24px 0;
+  cursor: pointer;
+  height: var(--height);
+  padding: 0 24px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 16px 20px #ddd;
+  transition: all 75ms ease-in;
+}
+
+.button-main:hover {
+  background-color: var(--primary-500);
+}
+
+.button-main:active {
+  background-color: var(--primary-600);
+}
