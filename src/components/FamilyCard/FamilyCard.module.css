@@ -8,16 +8,17 @@
   --border-width: 1px;
   border-radius: 8px;
   background-color: var(--white);
-  border: var(--border-width) solid var(--neutral-300);
+  /* border: var(--border-width) solid var(--primary-500); */
   overflow: hidden;
   cursor: pointer;
+  box-shadow: 0 16px 20px #00000021;
   transition: all 200ms ease;
 }
 
 .card:hover {
   transform: scale(1.015);
-  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.04),
-    -10px 0 20px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 10px 10px 20px 0 #00000025,
+    -10px 0 20px 0 #00000027;
   transition: all 200ms ease;
 }
 
@@ -79,7 +80,7 @@
 }
 
 .body {
-  padding: 16px 0px 24px 0px;
+  padding: 24px 0px;
 }
 
 .body > ul {

@@ -1,10 +1,10 @@
 .heading {
   font-size: 28px;
+  letter-spacing: .7px;
 }
 
 .description {
   padding: 48px 32px;
-  margin-bottom: 24px;
 }
 
 .families {
@@ -13,7 +13,7 @@
   grid-template-rows: 1fr;
   gap: 24px;
   padding: 48px 32px;
-  background-color: var(--neutral-100)
+  background-color: var(--neutral-100);
 }
 
 @media (max-width: 1240px) {

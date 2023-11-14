@@ -142,6 +142,22 @@ h2 {
   margin: 0;
 }
 
+/* Animation Classes */
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  filter: blur(4px);
+  transition: all 500ms ease-in-out;
+}
+
+.display {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+  transition: all 500ms ease-in-out;
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
