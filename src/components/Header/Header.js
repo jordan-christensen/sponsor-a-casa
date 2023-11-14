@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={styles.headerFull}
+        className={styles.header}
         style={{ "--background-url": `url(${bgImage.src})` }}
       >
         <a
@@ -24,9 +24,6 @@ export default function Header() {
           <div className={styles.heroTextTop}>Sponsor</div>
           <div className={styles.heroTextBottom}>A Casa</div>
         </div>
-        <h2 className={styles.subHeading}>
-          Improve the trajectory of a family forever
-        </h2>
       </header>
     </>
   );

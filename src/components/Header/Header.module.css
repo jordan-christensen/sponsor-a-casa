@@ -1,4 +1,4 @@
-.headerFull {
+.header {
   position: relative;
   background-color: greenyellow;
   background: linear-gradient(
@@ -15,11 +15,7 @@
   flex-direction: column;
   gap: 24px;
   color: var(--white);
-  padding: 32px;
-}
-
-.header {
-  composes: headerFull;
+  padding: 24px;
 }
 
 .logoAnchor {
@@ -60,19 +56,15 @@
   justify-content: center;
   font-family: var(--font-chlakh);
   line-height: 0.65;
+  transform: scale(0.75);
 }
 
 .heroTextTop {
-  font-size: 96px;
+  font-size: 94px;
 }
 
 .heroTextBottom {
   font-size: 114px;
-}
-
-.subHeading {
-  letter-spacing: 0.93px;
-  line-height: 1.1;
 }
 
 @media (max-width: 767px) {
