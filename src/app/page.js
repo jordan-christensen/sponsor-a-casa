@@ -65,6 +65,19 @@ export default function Home() {
         }
       />
 
+      <ReactCompareSlider
+        itemOne={
+          <ReactCompareSliderImage
+            src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1699930030/spark-of-hope/home/home_image4_a_byf2n2.jpg`}
+          />
+        }
+        itemTwo={
+          <ReactCompareSliderImage
+            src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1699930029/spark-of-hope/home/home_image4_b_kpt5jn.jpg`}
+          />
+        }
+      />
+
       <Link href="/families">
         <button className={styles.button}>Explore the possibilities</button>
       </Link>
