@@ -20,7 +20,7 @@ export default function CoSponsorInfo() {
     <>
       <h1>Co-Sponsor Information</h1>
       <div>Number of Co-Sponsors</div>
-      <TextField type="number" value />
+      {/* <TextField type="number" value /> */}
     </>
   );
 }
