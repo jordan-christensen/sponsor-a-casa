@@ -43,8 +43,11 @@ export default function SponsorPage({}) {
 
   return (
     <article className={styles.page}>
-      <button onClick={() => handleChangeView("increment")}>+</button>
-      <button onClick={() => handleChangeView("decrement")}>-</button>
+      <div className={styles.tools}>
+        <p>FOR DEV PURPOSES ONLY***</p>
+        <button onClick={() => handleChangeView("increment")}>+</button>
+        <button onClick={() => handleChangeView("decrement")}>-</button>
+      </div>
       <CurrentView />
     </article>
   );
