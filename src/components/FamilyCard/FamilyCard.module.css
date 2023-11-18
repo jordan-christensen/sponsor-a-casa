@@ -1,6 +1,6 @@
 .link {
   text-decoration: none;
-  color: black;
+  color: var(--neutral-800)
 }
 
 .card {
@@ -8,18 +8,17 @@
   --border-width: 1px;
   border-radius: 8px;
   background-color: var(--white);
-  /* border: var(--border-width) solid var(--primary-500); */
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 16px 20px #00000021;
-  transition: all 200ms ease;
+  transition: all 175ms ease-in-out;
 }
 
 .card:hover {
-  transform: scale(1.015);
+  transform: scale(1.01);
   box-shadow: 10px 10px 20px 0 #00000025,
-    -10px 0 20px 0 #00000027;
-  transition: all 200ms ease;
+    -10px 0 20px 0 #00000025;
+  transition: all 175ms ease-in-out;
 }
 
 .statusBar {
@@ -77,6 +76,9 @@
 
 .photo {
   min-height: 100%;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 .body {
@@ -88,7 +90,7 @@
   flex-direction: column;
   align-items: flex-start;
   font-size: 14px;
-  gap: 8px;
+  gap: 4px;
   padding-right: 40px;
   list-style-type: none;
 }

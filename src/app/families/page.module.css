@@ -8,28 +8,36 @@
 }
 
 .families {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 48px;
+  background-color: var(--neutral-100);
+}
+
+.familiesContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   gap: 24px;
-  padding: 48px 32px;
-  background-color: var(--neutral-100);
+  max-width: 1200px;
 }
 
 @media (max-width: 1240px) {
-  .families {
+  .familiesContainer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 767px) {
-  .families {
+  .familiesContainer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 540px) {
-  .families {
+  .familiesContainer {
     grid-template-columns: 1fr;
     grid-row-gap: 24px;
     grid-column-gap: 24px;
