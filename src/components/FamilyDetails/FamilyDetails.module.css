@@ -11,6 +11,13 @@
   padding: 24px;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
 .header {
   width: 100%;
   display: flex;
@@ -81,6 +88,7 @@
   flex-direction: row;
   gap: 16px;
   overflow-x: scroll;
+  padding-bottom: 16px;
 }
 
 .galleryImage {

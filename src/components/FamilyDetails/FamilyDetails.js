@@ -35,7 +35,7 @@ export default function FamilyDetails({
 
   return (
     <article className={styles.card}>
-      <div>
+      <div className={styles.container}>
         <header className={styles.header}>
           <h1 className={styles.heading}>Familia {family?.last_name}</h1>
           <Link href={`/families`}>
@@ -45,7 +45,11 @@ export default function FamilyDetails({
           </Link>
         </header>
         <section className={styles.body}>
-          <img className={styles.image} src={family.family_photo} alt="Family" />
+          <img
+            className={styles.image}
+            src={family.family_photo}
+            alt="Family"
+          />
           <div className={styles.details}>
             <div className={`${styles.status} ${statusColor}`}>
               {family.status}
@@ -54,7 +58,7 @@ export default function FamilyDetails({
           </div>
         </section>
         <section className={styles.gallery}>
-          {family?.current_living_photos?.map(({photo, index}) => (
+          {family?.current_living_photos?.map((photo, index) => (
             <img
               key={index}
               className={styles.galleryImage}
