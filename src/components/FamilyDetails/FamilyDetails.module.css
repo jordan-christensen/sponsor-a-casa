@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 16px;
   align-items: flex-start;
+  justify-content: space-between;
   height: calc(75dvh);
   min-height: 500px;
   width: calc(75dvw);

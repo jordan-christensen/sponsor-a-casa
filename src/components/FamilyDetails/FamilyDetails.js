@@ -35,35 +35,36 @@ export default function FamilyDetails({
 
   return (
     <article className={styles.card}>
-      <header className={styles.header}>
-        <h1 className={styles.heading}>Familia {family?.last_name}</h1>
-        <Link href={`/families`}>
-          <IconButton>
-            <CloseIcon />
-          </IconButton>
-        </Link>
-      </header>
-
-      <section className={styles.body}>
-        <img className={styles.image} src={family.family_photo} alt="Family" />
-        <div className={styles.details}>
-          <div className={`${styles.status} ${statusColor}`}>
-            {family.status}
+      <div>
+        <header className={styles.header}>
+          <h1 className={styles.heading}>Familia {family?.last_name}</h1>
+          <Link href={`/families`}>
+            <IconButton>
+              <CloseIcon />
+            </IconButton>
+          </Link>
+        </header>
+        <section className={styles.body}>
+          <img className={styles.image} src={family.family_photo} alt="Family" />
+          <div className={styles.details}>
+            <div className={`${styles.status} ${statusColor}`}>
+              {family.status}
+            </div>
+            <div className={styles.description}>{family.description}</div>
           </div>
-          <div className={styles.description}>{family.description}</div>
-        </div>
-      </section>
-
-      <section className={styles.gallery}>
-        {family?.current_living_photos?.map((photo) => (
-          <img
-            className={styles.galleryImage}
-            src={photo}
-            alt="Living conditions"
-          />
-        ))}
-      </section>
-      {/* <ImageGallery items={family?.photos}/> */}
+        </section>
+        <section className={styles.gallery}>
+          {family?.current_living_photos?.map(({photo, index}) => (
+            <img
+              key={index}
+              className={styles.galleryImage}
+              src={photo}
+              alt="Living conditions"
+            />
+          ))}
+        </section>
+        {/* <ImageGallery items={family?.photos}/> */}
+      </div>
 
       <footer className={styles.buttonRow}>
         <button className={styles.shiftButton} onClick={handleNavigatePrevious}>
