@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
             <div className={styles.text}>Many thanks to the generous contribution of time and talents from Jordan Christensen, Kevin Lindholm and Ali Khan. You are masters at what you do. Thank you for your support of this website.</div>
             <div className={styles.text}>{`© ${year} Spark of Hope Foundation`}</div>
             <div className={styles.version}>
-              v1.1.4
+              v1.1.6
             </div>
           </footer>
         </div>

@@ -1,3 +1,5 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 :root {
   /* Main */
   --text: #3f3f3f;
@@ -101,6 +103,22 @@
   --max-width-full: 100%;
   --margin-x-main: 32px;
   --margin-y-main: 48px;
+}
+
+.green {
+  background-color: var(--green-600);
+}
+
+.orange {
+  background-color: var(--orange-600);
+}
+
+.yellow {
+  background-color: var(--secondary-500);
+}
+
+.blue {
+  background-color: var(--blue-500);
 }
 
 @media (max-width: 767px) {

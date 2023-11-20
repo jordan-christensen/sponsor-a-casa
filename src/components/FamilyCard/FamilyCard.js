@@ -6,14 +6,16 @@ import styles from "./FamilyCard.module.css";
 export default function FamilyCard({ family }) {
   const getStatusColor = (status) => {
     switch (status) {
-      case "available":
-        return `${styles.green}`;
-      case "reserved":
-        return `${styles.blue}`;
-      case "scheduled":
-        return `${styles.yellow}`;
-      case "completed":
-        return `${styles.orange}`;
+      case "AVAILABLE":
+        return `green`;
+      case "RESERVED":
+        return `blue`;
+      case "SCHEDULED":
+        return `yellow`;
+      case "IN PROGRESS":
+        return `yellow`;
+      case "COMPLETED":
+        return `orange`;
     }
   };
 

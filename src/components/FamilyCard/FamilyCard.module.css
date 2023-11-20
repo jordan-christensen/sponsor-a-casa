@@ -1,6 +1,6 @@
 .link {
   text-decoration: none;
-  color: var(--neutral-800)
+  color: var(--neutral-800);
 }
 
 .card {
@@ -16,8 +16,7 @@
 
 .card:hover {
   transform: scale(1.01);
-  box-shadow: 10px 10px 20px 0 #00000025,
-    -10px 0 20px 0 #00000025;
+  box-shadow: 10px 10px 20px 0 #00000025, -10px 0 20px 0 #00000025;
   transition: all 175ms ease-in-out;
 }
 
@@ -33,23 +32,6 @@
   overflow: hidden;
   border-radius: calc(8px - var(--border-width)) calc(8px - var(--border-width))
     0 0;
-  background-color: var(--status-color);
-}
-
-.green {
-  background-color: var(--green-600);
-}
-
-.orange {
-  background-color: var(--orange-600);
-}
-
-.yellow {
-  background-color: var(--secondary-500);
-}
-
-.blue {
-  background-color: var(--blue-500);
 }
 
 .heading {
@@ -70,11 +52,16 @@
 }
 
 .frame {
+  aspect-ratio: 5 / 3;
   width: 100%;
-  background-color: pink;
+  min-height: 100%;
+  background-color: lightgray;
 }
 
 .photo {
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  object-position: center;
   min-height: 100%;
   user-select: none;
   user-drag: none;

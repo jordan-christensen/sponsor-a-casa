@@ -77,7 +77,11 @@ export default function Page({}) {
         </div>
       </section>
       {showModal && (
-        <Dialog maxWidth="100%" open={true}>
+        <Dialog
+          maxWidth="100%"
+          open={true}
+          onClose={() => router.push("/families")}
+        >
           <FamilyDetails
             family={selectedFamily}
             handleNavigatePrevious={handleNavigatePrevious}
