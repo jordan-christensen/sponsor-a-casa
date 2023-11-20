@@ -72,6 +72,7 @@ export default function CoSponsorInfo() {
       <div className={styles.numInput}>
         <label>Number of Co-Sponsors</label>
         <input
+          className={styles.numberInputValue}
           type="number"
           value={cosponsorData.length}
           min={1}
