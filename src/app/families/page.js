@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Dialog } from "@mui/material";
 // Components
@@ -13,7 +12,6 @@ import styles from "./page.module.css";
 export default function Page({}) {
   const router = useRouter();
   const families = getFamilies();
-
   let searchParams = useSearchParams();
   let showModal = searchParams.get("showModal");
   let familyId = searchParams.get("familyId");
@@ -57,8 +55,8 @@ export default function Page({}) {
   };
 
   const handleSponsorFamily = () => {
-    alert("sponsored!");
-  };
+    router.push(`/families/sponsor?familyId=${familyId}`)
+  }
 
   return (
     <>

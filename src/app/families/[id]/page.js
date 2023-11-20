@@ -1,37 +1,59 @@
-import React from "react";
-import Link from "next/link";
-// Hooks & Utils
-import { getFamilyById } from "@/lib/families";
-// Styles & Assets
+"use client";
+
+import React, { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import SponsorInfo from "./componenets/SponsorInfo";
+import CoSponsorInfo from "./componenets/CoSponsorInfo";
+import CreateEmail from "./componenets/CreateEmail";
+import Payment from "./componenets/Payment";
 import styles from "./page.module.css";
 
-export default function Page({ params }) {
-  const family = getFamilyById(params.id);
+const FormViews = {
+  0: SponsorInfo,
+  1: CoSponsorInfo,
+  2: Payment,
+  3: CreateEmail,
+};
+
+export default function SponsorPage({}) {
+  const [view, setView] = useState(1);
+  console.log(view);
+  const CurrentView = FormViews[view];
+
+  let searchParams = useSearchParams();
+  let familyId = searchParams.get("familyId");
+
+  const handleChangeView = (direction) => {
+    if (direction === "increment") {
+      setView((prevState) => {
+        if (prevState < 3) {
+          return prevState + 1;
+        } else {
+          return prevState;
+        }
+      });
+    }
+
+    if (direction === "decrement") {
+      setView((prevState) => {
+        if (prevState > 0) {
+          return prevState - 1;
+        } else {
+          return prevState;
+        }
+      });
+    }
+  };
+
   return (
     <article className={styles.page}>
-      <h1 className={styles.intro}>The {family?.last_name} Family</h1>
-      <section className={styles.details}>
-        <div className={styles.familyPhotoFrame}>
-          <img src={family?.family_photo} alt="Family photo" />
-        </div>
-        <div>{family?.description}</div>
-      </section>
-      <section className={styles.gallery}>
-        {family?.current_living_photos?.map((image, index) => (
-          <div key={index} className={styles.galleryFrame}>
-            <img
-              className={styles.galleryImage}
-              src={image}
-              alt="Current living conditions"
-            />
-          </div>
-        ))}
-      </section>
-      <section>
-        <Link href={`/families/${params.id}/sponsor`}>
-          <button className="button-main">Sponsor Family</button>
-        </Link>
-      </section>
+      <div className={styles.tools}>
+        <p>FOR DEV PURPOSES ONLY***</p>
+        <button onClick={() => handleChangeView("increment")}>+</button>
+        <button onClick={() => handleChangeView("decrement")}>-</button>
+      </div>
+      <h1>{familyId}</h1>
+      <CurrentView />
     </article>
   );
 }

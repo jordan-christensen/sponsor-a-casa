@@ -1,0 +1,14 @@
+.cosponsorRow {
+  display: grid;
+  grid-template-columns: 24px repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  gap: 16px;
+}
+
+.sponsorNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-bebas);
+  font-size: 21px;
+}
