@@ -9,6 +9,7 @@
   width: calc(75dvw);
   min-width: 360px;
   padding: 24px;
+  overflow-y: auto;
 }
 
 .container {

@@ -21,7 +21,7 @@ const initialSponsorForm = {
 };
 
 export default function SponsorInfo() {
-  const [ sponsorForm, setSponsorForm ] = useState(initialSponsorForm);
+  const [sponsorForm, setSponsorForm] = useState(initialSponsorForm);
 
   const handleFormInput = (event) => {
     const { name, value } = event.target;
@@ -34,14 +34,14 @@ export default function SponsorInfo() {
   };
 
   const handlePhoneInput = (value) => {
-    console.log(value)
+    console.log(value);
     setSponsorForm((prevState) => {
       return {
         ...prevState,
         phone: value,
-      }
-    })
-  }
+      };
+    });
+  };
 
   const handleMultiSelect = (event) => {
     console.log(event.target.value);
@@ -107,6 +107,7 @@ export default function SponsorInfo() {
           <FormControlLabel value="group" control={<Radio />} label="Group" />
         </RadioGroup>
       </FormControl>
+      <h1>🚧 TODO: STILL NEEDS VERIFY IDENTITY***</h1>
     </>
   );
 }

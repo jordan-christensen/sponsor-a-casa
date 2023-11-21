@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import SponsorInfo from "./componenets/SponsorInfo";
 import CoSponsorInfo from "./componenets/CoSponsorInfo";
 import CreateEmail from "./componenets/CreateEmail";
@@ -16,12 +16,11 @@ const FormViews = {
 };
 
 export default function SponsorPage({}) {
-  const [view, setView] = useState(1);
-  console.log(view);
-  const CurrentView = FormViews[view];
-
+  const [view, setView] = useState(0);
   let searchParams = useSearchParams();
   let familyId = searchParams.get("familyId");
+  
+  const CurrentView = FormViews[view];
 
   const handleChangeView = (direction) => {
     if (direction === "increment") {
@@ -52,7 +51,6 @@ export default function SponsorPage({}) {
         <button onClick={() => handleChangeView("increment")}>+</button>
         <button onClick={() => handleChangeView("decrement")}>-</button>
       </div>
-      <h1>{familyId}</h1>
       <CurrentView />
     </article>
   );

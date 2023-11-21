@@ -6,7 +6,7 @@
 }
 
 .numberInputValue {
-  font-size: 16px;
+  font-size: 18px;
   min-width: 64px;
   padding: 6px;
   font-weight: 600;
@@ -25,4 +25,10 @@
   justify-content: center;
   font-family: var(--font-bebas);
   font-size: 21px;
+}
+
+.paymentButtonRow {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr 2fr;
 }
