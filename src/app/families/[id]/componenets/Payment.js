@@ -52,7 +52,10 @@ export default function Payment() {
         onValueChange={validateValue}
         step={100}
       />
-      <div>Note: This donation is not refun </div>
+      <div>
+        Note: This donation is not refundable. You will have 60 days to raise
+        the remaining money for this project.
+      </div>
       <FormControl>
         <FormLabel>Payment Method</FormLabel>
         <RadioGroup
@@ -78,16 +81,25 @@ export default function Payment() {
         </RadioGroup>
       </FormControl>
       <section className={styles.paymentButtonRow}>
-        <Button sx={{ fontWeight: 600 }} variant="outlined">
+        <Button
+          sx={{ fontWeight: 600 }}
+          variant="outlined"
+          onClick={() => alert("Back")}
+        >
           Back
         </Button>
         <Button
           sx={{ fontWeight: 600 }}
           variant="outlined"
+          onClick={() => router.push("/families")}
         >
           Cancel
         </Button>
-        <Button sx={{ fontWeight: 600 }} variant="contained">
+        <Button
+          sx={{ fontWeight: 600 }}
+          variant="contained"
+          onClick={() => alert("Make Payment!")}
+        >
           Make Payment
         </Button>
       </section>

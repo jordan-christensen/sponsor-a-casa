@@ -54,18 +54,15 @@
 .frame {
   aspect-ratio: 5 / 3;
   width: 100%;
-  min-height: 100%;
   background-color: lightgray;
+  overflow: hidden;
 }
 
 .photo {
-  aspect-ratio: 5 / 3;
+  aspect-ratio: 5/3;
+  width: 100%;
   object-fit: cover;
   object-position: center;
-  min-height: 100%;
-  user-select: none;
-  user-drag: none;
-  -webkit-user-drag: none;
 }
 
 .body {

@@ -40,8 +40,8 @@ export default function FamilyCard({ family }) {
         <div className={styles.frame}>
           <img
             className={styles.photo}
+            alt="Photo of family"
             src={`${family.family_photo}`}
-            alt="Family photo"
           />
         </div>
         <div className={styles.body}>
