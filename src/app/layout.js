@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
             <div
               className={styles.text}
             >{`© ${year} Spark of Hope Foundation`}</div>
-            <div className={styles.version}>v1.1.8</div>
+            <div className={styles.version}>v1.1.9</div>
           </footer>
         </div>
       </body>
