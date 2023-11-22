@@ -1,15 +1,14 @@
 "use client";
 
-import { useRouter } from "next/router";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Slider from "react-slick";
+import { useRouter } from "next/navigation";
 import {
   ReactCompareSlider,
   ReactCompareSliderImage,
 } from "react-compare-slider";
-// Styles & Assets
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+// Styles & Assets
 import styles from "./page.module.css";
 
 const settings = {
@@ -24,6 +23,8 @@ const settings = {
 };
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <section className={styles.section}>
       <div className={styles.heading}>
@@ -39,56 +40,58 @@ export default function Home() {
         </p>
       </div>
       <div className={styles.sliders}>
-        <Slider {...settings}>
-          <ReactCompareSlider
-            itemOne={
-              <ReactCompareSliderImage
-                src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698957110/spark-of-hope/home/home_image3_a_fdrqmv.jpg`}
-              />
-            }
-            itemTwo={
-              <ReactCompareSliderImage
-                src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698957110/spark-of-hope/home/home_image3_b_pdiajv.jpg`}
-              />
-            }
-          />
-          <ReactCompareSlider
-            itemOne={
-              <ReactCompareSliderImage
-                src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698957052/spark-of-hope/home/home_image2_a_tzpzdt.jpg`}
-              />
-            }
-            itemTwo={
-              <ReactCompareSliderImage
-                src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698957051/spark-of-hope/home/home_image2_b_vgqple.jpg`}
-              />
-            }
-          />
-          <ReactCompareSlider
-            itemOne={
-              <ReactCompareSliderImage
-                src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698944001/spark-of-hope/home/home_image1_a_sissqz.jpg`}
-              />
-            }
-            itemTwo={
-              <ReactCompareSliderImage
-                src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698944001/spark-of-hope/home/home_image1_b_cyqfr8.jpg`}
-              />
-            }
-          />
-          <ReactCompareSlider
-            itemOne={
-              <ReactCompareSliderImage
-                src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1699930030/spark-of-hope/home/home_image4_a_byf2n2.jpg`}
-              />
-            }
-            itemTwo={
-              <ReactCompareSliderImage
-                src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1699930029/spark-of-hope/home/home_image4_b_kpt5jn.jpg`}
-              />
-            }
-          />
-        </Slider>
+        <div className={styles.sliderSection}>
+          <Slider {...settings}>
+            <ReactCompareSlider
+              itemOne={
+                <ReactCompareSliderImage
+                  src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698957110/spark-of-hope/home/home_image3_a_fdrqmv.jpg`}
+                />
+              }
+              itemTwo={
+                <ReactCompareSliderImage
+                  src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698957110/spark-of-hope/home/home_image3_b_pdiajv.jpg`}
+                />
+              }
+            />
+            <ReactCompareSlider
+              itemOne={
+                <ReactCompareSliderImage
+                  src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698957052/spark-of-hope/home/home_image2_a_tzpzdt.jpg`}
+                />
+              }
+              itemTwo={
+                <ReactCompareSliderImage
+                  src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1698957051/spark-of-hope/home/home_image2_b_vgqple.jpg`}
+                />
+              }
+            />
+            <ReactCompareSlider
+              itemOne={
+                <ReactCompareSliderImage
+                  src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1700622278/spark-of-hope/home/home_image1_a_mqug2k.jpg`}
+                />
+              }
+              itemTwo={
+                <ReactCompareSliderImage
+                  src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1700622277/spark-of-hope/home/home_image1_b_sdsqmu.jpg`}
+                />
+              }
+            />
+            <ReactCompareSlider
+              itemOne={
+                <ReactCompareSliderImage
+                  src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1699930030/spark-of-hope/home/home_image4_a_byf2n2.jpg`}
+                />
+              }
+              itemTwo={
+                <ReactCompareSliderImage
+                  src={`https://res.cloudinary.com/dvfcvw2kk/image/upload/v1699930029/spark-of-hope/home/home_image4_b_kpt5jn.jpg`}
+                />
+              }
+            />
+          </Slider>
+        </div>
       </div>
       <button
         className={styles.button}

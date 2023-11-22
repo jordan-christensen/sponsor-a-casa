@@ -1,10 +1,12 @@
 .section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 32px;
   text-align: center;
   line-height: 1.5;
   padding-bottom: 120px;
+  width: 100%;
 }
 
 .heading {
@@ -34,20 +36,37 @@
 
 .sliders {
   width: 100%;
-  background-color: var(--neutral-100);
-  padding: 32px;
+  background: rgb(138, 183, 200);
+  background: linear-gradient(
+    27deg,
+    rgba(138, 183, 200, 1) 0%,
+    rgba(172, 219, 221, 1) 52%,
+    rgba(177, 228, 216, 1) 100%
+  );
+
+  padding: 64px 32px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 32px;
 }
 
+.sliderSection {
+  max-width: 950px;
+}
+
+.logo {
+  width: 180px;
+}
+
 .button {
+  max-width: 600px;
   --height: 64px;
   font-family: var(--font-bebas);
-  background-color: var(--primary-400);
+  background-color: #d47502;
   color: var(--white);
-  font-size: 32px;
-  letter-spacing: .93px;
+  font-size: 30px;
+  letter-spacing: 1px;
   width: 100%;
   margin: 24px 0;
   cursor: pointer;
@@ -59,23 +78,9 @@
 }
 
 .button:hover {
-  background-color: var(--primary-500);
+  background-color: var(--secondary-600);
 }
 
 .button:active {
-  background-color: var(--primary-600);
-}
-
-.devTools {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(44, 91, 128, 0.697);
-  min-width: 175px;
-  min-height: 175px;
-  padding: 16px;
-}
-
-.devTools > ol {
-  list-style-position: inside;
+  background-color: var(--secondary-700);
 }
